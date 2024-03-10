@@ -3,6 +3,8 @@
 
 // alert("success")
 
-const GridStart = "Your Grid"
+const gridMessageStart = "Your Starting Grid:";
+const gridMessageNow = "Your Grid Now:";
+const gridMessageEnd = "You Won!";
 
-document.getElementById("grid-title").textContent.GridStart
+document.getElementById("grid-message").textContent = gridMessageStart;

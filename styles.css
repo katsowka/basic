@@ -10,14 +10,14 @@ h1{
     color: darkslateblue;
 }
   
-.fullwidth{
+.container{
     background-color: lightgoldenrodyellow;  
     display: flex;
     justify-content: space-around;
 }
 
 .box{
-    padding: 20px;
+    padding: 10px;
     /* float: left; */
     /* display: flex; */
     /* justify-content: center; */
@@ -25,22 +25,40 @@ h1{
     /* text-align: center */
 }
 
-#box1{
-  background-color: blue;
-  width: 70%;
+.grid{
+  display: grid;
+  width: 150px;
+  height: 150px;
+  grid-template: 50px 50px 50px / 50px 50px 50px;
+  /* auto auto auto / auto auto auto; */
 }
 
-#box2{
+.cell{
+  background-color: lightgoldenrodyellow;
+  border: 1px solid black;
+  padding: 12px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#instructions{
+  width: 70%;
+  /* height: 30vh;  use max somehow? or min?*/
+}
+
+#operations{
   display: flex;
   justify-content: center;
-  background-color: red;
+  border-style:dotted;
   width: 30%;
 }
 
-#box3{
+#box-for-grid{
   background-color: lightgreen;
   width: 50%;
 }
+
+
 
 #box4{
   display: flex;
