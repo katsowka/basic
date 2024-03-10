@@ -68,3 +68,8 @@ button{
 #box-roll {
   width: 60%;
 }
+
+#roll-button{
+  float: left;
+  margin-right: 10px;
+}

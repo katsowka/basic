@@ -52,19 +52,19 @@
             </div>
 
             <div class="box" id="box-roll">
-                <button id="roll-button" onclick="rollDice()">roll dice</button> 
-                <span class="after-roll" id="numbers-rolled"></span><br><br>
-                <div class="after-roll">choose the operation: 
-                    <input type="text" id="op" placeholder="(type S, D, P, Q or N)">
+                <button id="roll-button" onclick="rollDice(); resetInput()">roll dice</button> 
+
+                <p id="after-roll"><span id="numbers-rolled"></span><br><br>
+                    choose the operation: 
+                    <input type="text" id="op" placeholder="(type S, D, P, Q or N)" oninput=upperCase()>      
                     <button id="calc-button" onclick="getOutcome()">calculate</button>
-                    <br>
-                    <p class="after-choice"><span id="choice-msg"></span>
-                    <br><br>
-                    equation: <span id="expression"></span>
-                    <br><br>
+                </p>
+              
+                <p id="after-choice"><span id="choice-msg"></span><br><br>
+                    equation: <span id="expression"></span><br><br>
                     <span id="outcome-msg"></span>
-                    </p>
-                </div>
+                </p>
+            </div>
 
 
 

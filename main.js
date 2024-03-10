@@ -46,8 +46,8 @@ function outcomesF(n1, n2){
 
 // front end stuff
 
-document.getElementByClass("after-roll").style.visibility = "hidden"
-document.getElementByClass("after-choice").style.visibility = "hidden"
+document.getElementById("after-roll").style.visibility = "hidden"
+document.getElementById("after-choice").style.visibility = "hidden"
 
 const gridMessageStart = "Your Starting Grid:";
 const gridMessageNow = "Your Grid Now:";
@@ -56,7 +56,8 @@ const gridMessageEnd = "You Won!";
 document.getElementByID("grid-message").textContent = gridMessageStart;
 
 function rollDice() {
-    // document.getElementById("after-roll").style.visibility = "visible";
+    document.getElementById("after-roll").style.visibility = "visible";
+    document.getElementById("after-choice").style.visibility = "hidden"
     const n1 = Math.floor(Math.random() * 4 ) + 1;
     const n2 = Math.floor(Math.random() * 4 ) + 1;
     outcomes = outcomesF(n1, n2);
@@ -64,8 +65,19 @@ function rollDice() {
     document.getElementById("numbers-rolled").textContent = rolls;
 }
 
+function upperCase() {
+    const x = document.getElementById("op");
+    x.value = x.value.toUpperCase();
+  }
+
+function resetInput() {
+    document.getElementById('op').value = null;
+    document.getElementById('display').placeholder = "(type S, D, P, Q or N)";
+}
+  
+
 function getOutcome(){
-    // document.getElementById("after-choice").style.visibility = "visible"
+    document.getElementById("after-choice").style.visibility = "visible"
     const op = document.getElementById("op").value.toUpperCase().trim();
     const value = outcomes[op]["value"];
     const i = gridVals.indexOf(value);
@@ -77,8 +89,9 @@ function getOutcome(){
           `Yes! You just crossed ${value} off the grid!`;
           document.getElementById(gridKeys[i]).textContent = "X";
           document.getElementById(gridKeys[i]).style.backgroundColor = "orange";
+          document.getElementByID("grid-message").textContent = gridMessageNow;
     }
     else {document.getElementById("outcome-msg").textContent = 
-          `Sorry, ${value} isn't on the grid. Try again.`}
+          `Sorry, ${value} isn't on the grid. Try again.`;}
     
   }
