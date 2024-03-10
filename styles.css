@@ -1,39 +1,37 @@
-* {
-  box-sizing: border-box;
-}
-
-body{
+body {
     background-color: lightblue;
 }
   
-h1{
+h1 {
     color: darkslateblue;
 }
+
+button{
+  background-color: pink;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
   
-.container{
-    background-color: lightgoldenrodyellow;  
+.container { 
     display: flex;
     justify-content: space-around;
 }
 
-.box{
+.box {
     padding: 10px;
-    /* float: left; */
-    /* display: flex; */
-    /* justify-content: center; */
     align-items: center;
-    /* text-align: center */
 }
 
-.grid{
+.grid {
   display: grid;
   width: 150px;
   height: 150px;
   grid-template: 50px 50px 50px / 50px 50px 50px;
-  /* auto auto auto / auto auto auto; */
 }
 
-.cell{
+.cell {
   background-color: lightgoldenrodyellow;
   border: 1px solid black;
   padding: 12px;
@@ -41,32 +39,23 @@ h1{
   text-align: center;
 }
 
-#instructions{
-  width: 70%;
-  /* height: 30vh;  use max somehow? or min?*/
+
+#instructions {
+  width: 60%;
 }
 
-#operations{
+#operations {
   display: flex;
   justify-content: center;
-  border-style:dotted;
-  width: 30%;
+  border-style: dotted;
+  border-radius: 20px;
+  /* width: 40%; */
 }
 
-#box-for-grid{
-  background-color: lightgreen;
-  width: 50%;
+#box-for-grid {
+  width: 40%;
 }
 
-
-
-#box4{
-  display: flex;
-  justify-content: center;
-  background-color: pink;
-  width: 50%;
+#box-roll {
+  width: 60%;
 }
-  
-button{
-    background-color: pink;
-  }

@@ -14,12 +14,33 @@
             <div class="box" id="instructions">
                 <h3> Instructions: </h3>    
                 <ol> 
-                    <li>roll the dice!</li><br>
-                    <li>choose an operation which, when used with your numbers, will result in a number on your grid</li><br>
-                    <li>cover the whole grid using as few rolls as possible!</li>
+                    <li>Roll the dice!</li><br>
+                    <li>Choose an operation which, when used with your numbers, will result in a number on your grid
+                        (or choose N for none).</li><br>
+                    <li>Cover the whole grid using as few rolls as possible!</li>
                 </ol>  
             </div>
+            
+            <div align ="center" class="box" id="box-for-grid">
+                <h3 id="grid-message"></h3>
 
+                <div class="grid">
+                    <div class="cell" id="b00"></div>
+                    <div class="cell" id="b01"></div>
+                    <div class="cell" id="b02"></div>
+                    <div class="cell" id="b10"></div>
+                    <div class="cell" id="b11"></div>
+                    <div class="cell" id="b12"></div>
+                    <div class="cell" id="b20"></div>
+                    <div class="cell" id="b21"></div>
+                    <div class="cell" id="b22"></div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="container">
             <div class="box" id="operations">
                 <ul>
                     <li>S for Sum (adding)</li><br>
@@ -29,30 +50,28 @@
                     <li>N for None</li>
                 </ul>
             </div>
-        </div>
 
-        <hr>
-
-        <div class="container">
-            <div align ="center" class="box" id="box-for-grid">
-                <h3 id="grid-message"></h3>
-
-                <div class="grid">
-                    <div class="cell" id="b00">?</div>
-                    <div class="cell" id="b01">13</div>
-                    <div class="cell" id="b02"></div>
-                    <div class="cell" id="b10"></div>
-                    <div class="cell" id="b11"></div>
-                    <div class="cell" id="b12">4</div>
-                    <div class="cell" id="b20"></div>
-                    <div class="cell" id="b21">15</div>
-                    <div class="cell" id="b22">?</div>
+            <div class="box" id="box-roll">
+                <button id="roll-button" onclick="rollDice()">roll dice</button> 
+                <span class="after-roll" id="numbers-rolled">you rolld X and X</span><br><br>
+                <div class="after-roll">choose the operation: 
+                    <input type="text" id="op" placeholder="(type S, D, P, Q or N)">
+                    <button id="calc-button" onclick="getOutcome()">calculate</button>
+                    <br>
+                    <p class="after-choice"><span id="choice-msg">you chose X</span>
+                    <br><br>
+                    equation: <span id="expression">this will be the eqation</span>
+                    <br><br>
+                    <span id="outcome-msg">outcome message</span>
+                    </p>
                 </div>
 
-            </div>
 
-            <div class="box" id="box4">
-                    Roll and Calculate Space</div>
+
+
+
+
+            </div>
         </div>
 
         <script src="main.js"></script>
