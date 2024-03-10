@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+}
+  
+h1{
+    color: darkslateblue;
+}
+  
+.fullwidth{
+    background-color: lightgoldenrodyellow;  
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+    padding: 20px;
+    /* float: left; */
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    /* text-align: center */
+}
+
+#box1{
+  background-color: blue;
+  width: 70%;
+}
+
+#box2{
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  width: 30%;
+}
+
+#box3{
+  background-color: lightgreen;
+  width: 50%;
+}
+
+#box4{
+  display: flex;
+  justify-content: center;
+  background-color: pink;
+  width: 50%;
+}
+  
+button{
+    background-color: pink;
+  }
