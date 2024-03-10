@@ -7,7 +7,7 @@ h1 {
 }
 
 button{
-  background-color: pink;
+  background-color: thistle;
   border-radius: 5px;
   padding: 5px;
   font-size: 15px;
@@ -39,6 +39,14 @@ button{
   text-align: center;
 }
 
+.after-roll .after-choice {
+  visibility: "hidden";
+}
+
+.after-choice {
+  visibility: "hidden";
+}
+
 
 #instructions {
   width: 60%;
@@ -49,6 +57,7 @@ button{
   justify-content: center;
   border-style: dotted;
   border-radius: 20px;
+  background-color:azure;
   /* width: 40%; */
 }
 
