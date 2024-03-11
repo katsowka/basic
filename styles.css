@@ -39,15 +39,6 @@ button{
   text-align: center;
 }
 
-.after-roll .after-choice {
-  visibility: "hidden";
-}
-
-.after-choice {
-  visibility: "hidden";
-}
-
-
 #instructions {
   width: 60%;
 }

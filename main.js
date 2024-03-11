@@ -18,7 +18,7 @@ for (let i=0; i<gridKeys.length; i++){
 document.getElementById(String(gridKeys[i])).textContent = grid[gridKeys[i]];
 }
 
-// helper functions
+// helper functions from back-end
 
 function outcomesF(n1, n2){
     const sum = n1 + n2;
@@ -49,7 +49,7 @@ function outcomesF(n1, n2){
 document.getElementById("after-roll").style.visibility = "hidden"
 document.getElementById("after-choice").style.visibility = "hidden"
 
-const gridMessageStart = "Your Starting Grid:";
+const gridMessageStart = "Your Starting Grid:"; // XXX
 const gridMessageNow = "Your Grid Now:";
 const gridMessageEnd = "You Won!";
 
@@ -90,8 +90,8 @@ function getOutcome(){
           document.getElementById(gridKeys[i]).textContent = "X";
           document.getElementById(gridKeys[i]).style.backgroundColor = "orange";
           document.getElementByID("grid-message").textContent = gridMessageNow;
+          //alert("That's it for now - stay tuned for the full version of the game!")
     }
     else {document.getElementById("outcome-msg").textContent = 
           `Sorry, ${value} isn't on the grid. Try again.`;}
-    
   }
